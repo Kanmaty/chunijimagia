@@ -94,7 +94,7 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             {
                 id: 'mille_skill_1',
                 name: 'ピンポイント',
-                description: '対象に3ダメージを与える。',
+                description: '敵1体に3ダメージを与える。',
                 cost: 1,
                 level: 1,
                 conditions: [{ type: 'role', value: '回復者', count: 1 }],
@@ -194,7 +194,7 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
     },
     zeta: {
         id: 'zeta',
-        name: 'ゼータ',
+        name: 'ベータ',
         maxHp: 30,
         defense: 0,
         initialMp: 3,
@@ -202,8 +202,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
         equippedSkills: [
             {
                 id: 'zeta_skill_1',
-                name: '捨て身の一撃',
-                description: 'あなたは、固定2ダメージを受ける。敵1体に、4ダメージを与える。',
+                name: '返り血',
+                description: '自身に固定2ダメージを与え、敵1体に4ダメージを与える。',
                 cost: 3,
                 level: 1,
                 conditions: [{ type: 'role', value: '剣士', count: 1 }],
@@ -214,8 +214,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'zeta_skill_2',
-                name: 'ドラゴンフュージョン',
-                description: 'あなたのターン終了時まで、あなたの手札の剣士タイプのコストが-1される。あなたはMPを1得る',
+                name: '鼓舞',
+                description: 'ターン終了時まで、手札の剣士タイプのコストが-1され、CPを1得る',
                 cost: 0,
                 level: 1,
                 conditions: [{ type: 'role', value: '剣士', count: 1 }],
@@ -226,8 +226,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'zeta_skill_3',
-                name: '一喝',
-                description: '味方クリーチャー1体に、固定1ダメージを与え、このターンの間、攻撃力+2を付与する。',
+                name: '懺悔',
+                description: '自身のモンスター1体に固定1ダメージを与え、ターン終了まで攻撃力を+2する。',
                 cost: 1,
                 level: 1,
                 conditions: [{ type: 'role', value: '守護者', count: 1 }],
@@ -238,8 +238,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'zeta_skill_4',
-                name: '決死の一撃',
-                description: 'あなたは、固定3ダメージを受ける。敵1体に、5ダメージを与える。',
+                name: '切腹',
+                description: '自身に固定3ダメージを与え、敵1体に5ダメージを与える。',
                 cost: 0,
                 level: 2,
                 conditions: [{ type: 'role', value: '剣士', count: 2 }],
@@ -250,8 +250,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'zeta_skill_5',
-                name: 'ドラゴンビート',
-                description: 'あなたは、固定1ダメージを受ける。味方の剣士タイプ全体に、このターンの間、攻撃力+2を付与する。',
+                name: '特攻',
+                description: '自身に固定1ダメージを与え、ターン終了まで自身の剣士タイプ全体の攻撃力を+2する。',
                 cost: 1,
                 level: 2,
                 conditions: [
@@ -265,8 +265,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'zeta_skill_6',
-                name: '煽動',
-                description: 'セット中の敵クリーチャー1体をサモンする。',
+                name: '揺動',
+                description: '予約中の敵のモンスター1体を召喚する。',
                 cost: 1,
                 level: 2,
                 conditions: [
@@ -277,8 +277,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'zeta_skill_7',
-                name: 'ブラッディブロウ',
-                description: 'あなたは、固定1ダメージを受ける。敵1体に、6ダメージを与える。',
+                name: '腹切りFUJIYAMA',
+                description: '自身に固定1ダメージを与え、敵1体に6ダメージを与える。',
                 cost: 0,
                 level: 3,
                 conditions: [{ type: 'role', value: '剣士', count: 3 }],
@@ -289,8 +289,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'zeta_skill_8',
-                name: 'ドラゴンソウル',
-                description: '味方の剣士タイプ全体に、ライフ+1と攻撃力+1を付与する。あなたはMPを1得る。',
+                name: '武将の心得',
+                description: '自身の剣士タイプ全体の体力と攻撃力を+1する。CPを1得る。',
                 cost: 0,
                 level: 3,
                 conditions: [
@@ -304,8 +304,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'zeta_skill_9',
-                name: 'レイジオブスペード',
-                description: '敵1体に、あなたの墓地にある月タイプの枚数分のダメージを与える。あなたはMPを1得る。',
+                name: '鎮魂歌',
+                description: '敵1体に自身の墓地にある月タイプの枚数分のダメージを与える。CPを1得る。',
                 cost: 0,
                 level: 3,
                 conditions: [
@@ -321,7 +321,7 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
     },
     karin: {
         id: 'karin',
-        name: 'カリン（神道 花梨）',
+        name: 'カイン',
         maxHp: 28,
         defense: 1,
         initialMp: 2,
@@ -329,8 +329,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
         equippedSkills: [
             {
                 id: 'karin_skill_1',
-                name: '裂断斬り',
-                description: '敵1体に、2ダメージを与える。',
+                name: '手刀',
+                description: '敵1体に2ダメージを与える。',
                 cost: 0,
                 level: 1,
                 conditions: [{ type: 'role', value: '守護者', count: 1 }],
@@ -338,8 +338,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'karin_skill_2',
-                name: '兜割り',
-                description: '敵1体に、固定2ダメージを与える。',
+                name: '串刺し',
+                description: '敵1体に固定2ダメージを与える。',
                 cost: 1,
                 level: 1,
                 conditions: [{ type: 'role', value: '守護者', count: 1 }],
@@ -347,8 +347,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'karin_skill_3',
-                name: '気合溜め',
-                description: 'あなたはＭＰを1得る。',
+                name: '集中',
+                description: 'CPを1得る。',
                 cost: 0,
                 level: 1,
                 conditions: [{ type: 'role', value: '守護者', count: 1 }],
@@ -356,8 +356,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'karin_skill_4',
-                name: '月閃',
-                description: '敵クリーチャー全体に、固定2ダメージを与える。',
+                name: '抜刀',
+                description: '敵モンスター全体に固定2ダメージを与える。',
                 cost: 0,
                 level: 2,
                 conditions: [
@@ -368,8 +368,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'karin_skill_5',
-                name: '介錯',
-                description: 'ランダムな敵クリーチャー1体を、即死させる。',
+                name: '電光石火',
+                description: 'ランダムな敵モンスター1体を破壊する。',
                 cost: 1,
                 level: 2,
                 conditions: [
@@ -380,8 +380,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'karin_skill_6',
-                name: '鋼の刃',
-                description: '敵1体に、固定4ダメージを与える。',
+                name: '斬撃',
+                description: '敵1体に固定4ダメージを与える。',
                 cost: 0,
                 level: 2,
                 conditions: [
@@ -392,8 +392,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'karin_skill_7',
-                name: '五月雨斬り',
-                description: '敵1体に、4ダメージを与え、敵クリーチャー全体に1ダメージを与える。あなたはＭＰを2得る。',
+                name: '大回転斬り',
+                description: '敵1体に4ダメージを与え、敵モンスター全体に1ダメージを与える。CPを2得る。',
                 cost: 0,
                 level: 3,
                 conditions: [
@@ -408,8 +408,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'karin_skill_8',
-                name: '剣の精神',
-                description: '味方の守護者タイプ全体に、攻撃力+2を付与する。',
+                name: '勝負',
+                description: '自身の守護者タイプ全体の攻撃力を+2する。',
                 cost: 1,
                 level: 3,
                 conditions: [
@@ -420,8 +420,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'karin_skill_9',
-                name: '月光斬',
-                description: '敵1体に、固定5ダメージを与える。',
+                name: '居合切り',
+                description: '敵1体に固定5ダメージを与える。',
                 cost: 0,
                 level: 3,
                 conditions: [
@@ -434,7 +434,7 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
     },
     elena: {
         id: 'elena',
-        name: 'エレナ・ブリリアント',
+        name: 'イェレナ',
         maxHp: 18,
         defense: 2,
         initialMp: 1,
@@ -442,8 +442,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
         equippedSkills: [
             {
                 id: 'elena_skill_1',
-                name: 'パラソルアタック',
-                description: '敵1体に、2ダメージを与える。',
+                name: '毒針',
+                description: '敵1体に2ダメージを与える。',
                 cost: 0,
                 level: 1,
                 conditions: [{ type: 'role', value: '暗殺者', count: 1 }],
@@ -451,8 +451,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'elena_skill_2',
-                name: 'ウェイクアップ',
-                description: 'セット中のクリーチャー1体をサモンする。',
+                name: 'トリック',
+                description: '場の予約中のモンスター1体を召喚する。',
                 cost: 4,
                 level: 1,
                 conditions: [{ type: 'affiliation', value: '雲', count: 1 }],
@@ -460,8 +460,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'elena_skill_3',
-                name: '小悪魔キッス',
-                description: '味方の星タイプのクリーチャー1体に、このターンの間、攻撃力+2を付与する。',
+                name: '媚薬',
+                description: 'ターン終了まで、自身の星タイプのモンスター1体の攻撃力を+2する。',
                 cost: 2,
                 level: 1,
                 conditions: [
@@ -472,8 +472,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'elena_skill_4',
-                name: '光の壁',
-                description: '味方クリーチャー1体に、ライフ+2と挑発を付与する。',
+                name: 'クスリ',
+                description: '自身のモンスター1体のライフを+2し、挑発を付与する。',
                 cost: 1,
                 level: 2,
                 conditions: [
@@ -484,8 +484,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'elena_skill_5',
-                name: '闇のヴェール',
-                description: '味方クリーチャー1体に、ステルスを付与する。',
+                name: '闇堕ち薬',
+                description: '味方のモンスター1体に潜伏を付与する。',
                 cost: 0,
                 level: 2,
                 conditions: [
@@ -496,8 +496,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'elena_skill_6',
-                name: '力の契約',
-                description: '味方クリーチャー全体に、攻撃力+1を付与する。',
+                name: 'バイブス',
+                description: '味方モンスター全体の攻撃力を+1する。',
                 cost: 2,
                 level: 2,
                 conditions: [
@@ -508,8 +508,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'elena_skill_7',
-                name: 'アニマルレギオン',
-                description: '味方の狩人タイプ全体に、ライフ+2と挑発を付与する。',
+                name: 'tウイルス',
+                description: '自身の狩人タイプ全体の体力を+2し、挑発を付与する。',
                 cost: 1,
                 level: 3,
                 conditions: [
@@ -520,8 +520,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'elena_skill_8',
-                name: '断罪',
-                description: '敵全体に、固定3ダメージを与える。',
+                name: '刺激ガス',
+                description: '敵全体に固定3ダメージを与える。',
                 cost: 0,
                 level: 3,
                 conditions: [
@@ -532,8 +532,8 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
             },
             {
                 id: 'elena_skill_9',
-                name: '悪魔の微笑み',
-                description: '味方の暗殺者タイプ全体に、攻撃力+2を付与する。',
+                name: 'MDMA',
+                description: '自身の暗殺者タイプ全体の攻撃力を+2する。',
                 cost: 1,
                 level: 3,
                 conditions: [
@@ -547,116 +547,116 @@ export const CharactersDb: Record<string, PlayerCharacter> = {
     },
     raizer: {
         id: 'raizer',
-        name: 'ライザー',
+        name: 'ナイサー',
         maxHp: 30,
         defense: 0,
         initialMp: 3,
         mpRegen: 4,
         equippedSkills: [
-            { id: 'raizer_skill_1', name: 'ナイフアタック', description: '敵1体に、3ダメージを与える。', cost: 1, level: 1, conditions: [{ type: 'role', value: '狩人', count: 1 }], effects: [{ type: 'DAMAGE_TARGET', amount: 3 }] },
-            { id: 'raizer_skill_2', name: '防御指示', description: '味方の錬金術師タイプ1体に、シールドを付与する。', cost: 0, level: 1, conditions: [{ type: 'role', value: '錬金術師', count: 1 }], effects: [{ type: 'BUFF_TARGET_STATS', targetType: '錬金術師', grantShield: true }] },
-            { id: 'raizer_skill_3', name: '攻撃指示', description: '味方クリーチャー1体に、ライフ+1と攻撃力+1を付与する。', cost: 0, level: 1, conditions: [{ type: 'role', value: '狩人', count: 1 }], effects: [{ type: 'BUFF_TARGET_STATS', buffHp: 1, buffAttack: 1 }] },
-            { id: 'raizer_skill_4', name: '遠吠え', description: 'セット中のクリーチャー1体をサモンし、その持ち主のターン終了時まで、攻撃力+1を付与する。', cost: 2, level: 2, conditions: [{ type: 'role', value: '狩人', count: 2 }], effects: [{ type: 'SUMMON_TARGET' }, { type: 'BUFF_TARGET_STATS', buffAttack: 1 }] },
-            { id: 'raizer_skill_5', name: '大暴れ', description: 'あなたは固定1ダメージを受ける。敵クリーチャー全体に、固定2ダメージを与える。', cost: 0, level: 2, conditions: [{ type: 'affiliation', value: '月', count: 1 }], effects: [{ type: 'DAMAGE_PLAYER', amount: 1 }, { type: 'FIXED_DAMAGE_ALL_ENEMY', amount: 2 }] },
-            { id: 'raizer_skill_6', name: '補給物資', description: 'カードを2枚ドローする。あなたはMPを1得る。', cost: 0, level: 2, conditions: [{ type: 'role', value: '錬金術師', count: 1 }], effects: [{ type: 'DRAW_CARDS', amount: 2 }, { type: 'GAIN_MP', amount: 1 }] },
-            { id: 'raizer_skill_7', name: 'ビーストコンバット', description: '敵1体に、固定5ダメージを与える。あなたはMPを2得る。', cost: 0, level: 3, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '狩人', count: 2 }], effects: [{ type: 'FIXED_DAMAGE_TARGET', amount: 5 }, { type: 'GAIN_MP', amount: 2 }] },
-            { id: 'raizer_skill_8', name: 'ソウルイーター', description: '敵全体に、3ダメージを与える。あなたはライフを1回復し、MPを1得る。', cost: 0, level: 3, conditions: [{ type: 'affiliation', value: '月', count: 2 }], effects: [{ type: 'DAMAGE_ALL_ENEMIES_AND_PLAYER', amount: 3 }, { type: 'HEAL_PLAYER', amount: 1 }, { type: 'GAIN_MP', amount: 1 }] },
-            { id: 'raizer_skill_9', name: 'ワイルドファング', description: '相手能力者に、固定4ダメージを与える。相手能力者は、相手のターン終了時まで、スキルを使用できなくなる。', cost: 0, level: 3, conditions: [{ type: 'role', value: '錬金術師', count: 2 }], effects: [{ type: 'HONOUR_DAMAGE_TARGET', amount: 4 }, { type: 'SEAL_ENEMY_SKILL' }] }
+            { id: 'raizer_skill_1', name: 'パンチ', description: '敵1体に3ダメージを与える。', cost: 1, level: 1, conditions: [{ type: 'role', value: '狩人', count: 1 }], effects: [{ type: 'DAMAGE_TARGET', amount: 3 }] },
+            { id: 'raizer_skill_2', name: 'ブロック', description: '自身の錬金術師タイプ1体に盾を付与する。', cost: 0, level: 1, conditions: [{ type: 'role', value: '錬金術師', count: 1 }], effects: [{ type: 'BUFF_TARGET_STATS', targetType: '錬金術師', grantShield: true }] },
+            { id: 'raizer_skill_3', name: 'ファイティンググローブ', description: '自身のモンスター1体のライフと攻撃力を+1する。', cost: 0, level: 1, conditions: [{ type: 'role', value: '狩人', count: 1 }], effects: [{ type: 'BUFF_TARGET_STATS', buffHp: 1, buffAttack: 1 }] },
+            { id: 'raizer_skill_4', name: '掴み', description: '場の予約中のモンスター1体を召喚し、相手のターン終了時まで、攻撃力を+1する。', cost: 2, level: 2, conditions: [{ type: 'role', value: '狩人', count: 2 }], effects: [{ type: 'SUMMON_TARGET' }, { type: 'BUFF_TARGET_STATS', buffAttack: 1 }] },
+            { id: 'raizer_skill_5', name: '逆鱗', description: '自身に固定1ダメージを与え、相手モンスター全体に固定2ダメージを与える。', cost: 0, level: 2, conditions: [{ type: 'affiliation', value: '月', count: 1 }], effects: [{ type: 'DAMAGE_PLAYER', amount: 1 }, { type: 'FIXED_DAMAGE_ALL_ENEMY', amount: 2 }] },
+            { id: 'raizer_skill_6', name: '給水', description: 'カードを2枚ドローする。CPを1得る。', cost: 0, level: 2, conditions: [{ type: 'role', value: '錬金術師', count: 1 }], effects: [{ type: 'DRAW_CARDS', amount: 2 }, { type: 'GAIN_MP', amount: 1 }] },
+            { id: 'raizer_skill_7', name: '叩き割り', description: '相手1体に固定5ダメージを与える。CPを2得る。', cost: 0, level: 3, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '狩人', count: 2 }], effects: [{ type: 'FIXED_DAMAGE_TARGET', amount: 5 }, { type: 'GAIN_MP', amount: 2 }] },
+            { id: 'raizer_skill_8', name: '精力吸い', description: '相手全体に3ダメージを与える。自身の体力を1回復する。CPを1得る。', cost: 0, level: 3, conditions: [{ type: 'affiliation', value: '月', count: 2 }], effects: [{ type: 'DAMAGE_ALL_ENEMIES_AND_PLAYER', amount: 3 }, { type: 'HEAL_PLAYER', amount: 1 }, { type: 'GAIN_MP', amount: 1 }] },
+            { id: 'raizer_skill_9', name: 'タイマン', description: '相手能力者に固定4ダメージを与える。相手能力者は相手のターン終了時まで、チュニジアンスキルを使用できなくなる。', cost: 0, level: 3, conditions: [{ type: 'role', value: '錬金術師', count: 2 }], effects: [{ type: 'HONOUR_DAMAGE_TARGET', amount: 4 }, { type: 'SEAL_ENEMY_SKILL' }] }
         ]
     },
     leo: {
         id: 'leo',
-        name: 'レオ',
+        name: 'テオ',
         maxHp: 24,
         defense: 1,
         initialMp: 3,
         mpRegen: 4,
         equippedSkills: [
-            { id: 'leo_skill_1', name: '襲撃', description: '敵1体に、3ダメージを与える。', cost: 1, level: 1, conditions: [{ type: 'role', value: '守護者', count: 1 }], effects: [{ type: 'DAMAGE_TARGET', amount: 3 }] },
-            { id: 'leo_skill_2', name: '恫喝', description: '相手のMPを1奪う。', cost: 0, level: 1, conditions: [{ type: 'role', value: '守護者', count: 1 }], effects: [{ type: 'STEAL_MP', amount: 1 }] },
-            { id: 'leo_skill_3', name: 'ライフアップ', description: '自動発動 あなたの初期ライフが+3される。', cost: 0, level: 1, conditions: [], effects: [{ type: 'AUTO_LIFE_BOOST', amount: 3 }] },
-            { id: 'leo_skill_4', name: 'うたたね', description: 'あなたのライフを1回復し、MPを1得る。', cost: 0, level: 2, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '回復者', count: 1 }], effects: [{ type: 'HEAL_PLAYER', amount: 1 }, { type: 'GAIN_MP', amount: 1 }] },
-            { id: 'leo_skill_5', name: '暗殺', description: 'セット中の敵クリーチャー1体をランダムに即死させる。', cost: 4, level: 2, conditions: [{ type: 'role', value: '守護者', count: 3 }], effects: [{ type: 'INSTANT_KILL_RANDOM_RESERVED_ENEMY' }] },
-            { id: 'leo_skill_6', name: '退場命令', description: '敵クリーチャー1体を持ち主の手札に戻す。', cost: 2, level: 2, conditions: [{ type: 'affiliation', value: '月', count: 2 }, { type: 'role', value: '回復者', count: 1 }], effects: [{ type: 'RETURN_ENEMY_TO_HAND' }] },
-            { id: 'leo_skill_7', name: 'デスペラード', description: 'ランダムな敵に、固定1ダメージを合計4回与える。あなたはMPを2得る。', cost: 0, level: 3, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '守護者', count: 2 }], effects: [{ type: 'RANDOM_FIXED_DAMAGE_MULTIPLE', amount: 1, hitCount: 4 }, { type: 'GAIN_MP', amount: 2 }] },
-            { id: 'leo_skill_8', name: 'ナイトメアリンク', description: '敵1体に、固定6ダメージを与える。', cost: 2, level: 3, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '守護者', count: 2 }], effects: [{ type: 'FIXED_DAMAGE_TARGET', amount: 6 }] },
-            { id: 'leo_skill_9', name: '覚醒', description: '味方の回復者タイプ全体に、攻撃力+2を付与する。', cost: 1, level: 3, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '守護者', count: 2 }], effects: [{ type: 'BUFF_ALL_ROLE', roleCondition: '回復者', buffAttack: 2 }] }
+            { id: 'leo_skill_1', name: 'ナイフ', description: '相手1体に3ダメージを与える。', cost: 1, level: 1, conditions: [{ type: 'role', value: '守護者', count: 1 }], effects: [{ type: 'DAMAGE_TARGET', amount: 3 }] },
+            { id: 'leo_skill_2', name: '奪取', description: '相手のCPを1奪う。', cost: 0, level: 1, conditions: [{ type: 'role', value: '守護者', count: 1 }], effects: [{ type: 'STEAL_MP', amount: 1 }] },
+            { id: 'leo_skill_3', name: '強心臓', description: '自身の初期体力を+3する。', cost: 0, level: 1, conditions: [], effects: [{ type: 'AUTO_LIFE_BOOST', amount: 3 }] },
+            { id: 'leo_skill_4', name: '有給', description: '自身の体力を1回復する。CPを1得る。', cost: 0, level: 2, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '回復者', count: 1 }], effects: [{ type: 'HEAL_PLAYER', amount: 1 }, { type: 'GAIN_MP', amount: 1 }] },
+            { id: 'leo_skill_5', name: '暗殺', description: '予約状態のランダムな相手モンスター1体を破壊する。', cost: 4, level: 2, conditions: [{ type: 'role', value: '守護者', count: 3 }], effects: [{ type: 'INSTANT_KILL_RANDOM_RESERVED_ENEMY' }] },
+            { id: 'leo_skill_6', name: '通報', description: 'ランダムな相手モンスター1体を手札に戻す。', cost: 2, level: 2, conditions: [{ type: 'affiliation', value: '月', count: 2 }, { type: 'role', value: '回復者', count: 1 }], effects: [{ type: 'RETURN_ENEMY_TO_HAND' }] },
+            { id: 'leo_skill_7', name: '乱射', description: 'ランダムな相手に固定1ダメージを4回与える。CPを2得る。', cost: 0, level: 3, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '守護者', count: 2 }], effects: [{ type: 'RANDOM_FIXED_DAMAGE_MULTIPLE', amount: 1, hitCount: 4 }, { type: 'GAIN_MP', amount: 2 }] },
+            { id: 'leo_skill_8', name: 'スナイプ', description: '相手1体に固定6ダメージを与える。', cost: 2, level: 3, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '守護者', count: 2 }], effects: [{ type: 'FIXED_DAMAGE_TARGET', amount: 6 }] },
+            { id: 'leo_skill_9', name: '賄賂', description: '自身の回復者タイプ全体の攻撃力を+2する。', cost: 1, level: 3, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '守護者', count: 2 }], effects: [{ type: 'BUFF_ALL_ROLE', roleCondition: '回復者', buffAttack: 2 }] }
         ]
     },
     sally: {
         id: 'sally',
-        name: 'サリー',
+        name: 'カリー',
         maxHp: 28,
         defense: 1,
         initialMp: 2,
         mpRegen: 4,
         equippedSkills: [
-            { id: 'sally_skill_1', name: '星の祈り', description: '味方クリーチャー1体に、ライフ+1と攻撃力+1を付与する。', cost: 0, level: 1, conditions: [{ type: 'role', value: '守護者', count: 1 }], effects: [{ type: 'BUFF_TARGET_STATS', buffHp: 1, buffAttack: 1 }] },
-            { id: 'sally_skill_2', name: '剣の舞', description: '敵クリーチャー全体に、2ダメージを与える。', cost: 1, level: 1, conditions: [{ type: 'role', value: '守護者', count: 1 }], effects: [{ type: 'DAMAGE_ALL_ENEMY', amount: 2 }] },
-            { id: 'sally_skill_3', name: 'パラライズ', description: '敵クリーチャー1体を、相手のターン終了時まで、麻痺状態にする。', cost: 0, level: 1, conditions: [{ type: 'affiliation', value: '月', count: 1 }], effects: [{ type: 'PARALYZE_TARGET' }] },
-            { id: 'sally_skill_4', name: '奇跡の舞', description: '味方クリーチャー全体をレベルアップさせる。', cost: 3, level: 2, conditions: [{ type: 'role', value: '守護者', count: 2 }], effects: [{ type: 'LEVEL_UP_ALL_ALLIES' }] },
-            { id: 'sally_skill_5', name: 'テンプテーション', description: 'セット中の敵クリーチャー1体をランダムにサモンし、攻撃力-1を付与する。', cost: 1, level: 2, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '守護者', count: 2 }], effects: [{ type: 'SUMMON_RANDOM_ENEMY_RESERVED' }, { type: 'DEBUFF_TARGET_STATS', buffAttack: -1 }] },
-            { id: 'sally_skill_6', name: '幻惑の光', description: '相手は、相手のターン終了時まで、相手の手札の全カードのコストが+1される。あなたの手札のクリーチャーのコストが-1される。', cost: 0, level: 2, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '守護者', count: 1 }], effects: [{ type: 'DEBUFF_ENEMY_HAND_COST', amount: 1 }, { type: 'BUFF_HAND_COST', amount: -1 }] },
-            { id: 'sally_skill_7', name: '死星活性', description: '敵クリーチャー全体に、固定2ダメージを与え、相手のデッキ内のカードを上から1枚消滅させる。', cost: 1, level: 3, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '守護者', count: 3 }], effects: [{ type: 'FIXED_DAMAGE_ALL_ENEMY', amount: 2 }, { type: 'MILL_ENEMY_DECK', amount: 1 }] },
-            { id: 'sally_skill_8', name: '刃の乱舞', description: '敵全体に、固定2ダメージを与え、あなたはMPを3得る。味方クリーチャー全体に、ライフ+1と攻撃力+1を付与する。', cost: 0, level: 3, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '守護者', count: 2 }], effects: [{ type: 'FIXED_DAMAGE_ALL_ENEMY', amount: 2 }, { type: 'GAIN_MP', amount: 3 }, { type: 'BUFF_ALL_ALLIES', buffHp: 1, buffAttack: 1 }] },
-            { id: 'sally_skill_9', name: '星空煌光', description: '味方の未行動のクリーチャー全体に、2回行動を付与する。', cost: 5, level: 3, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '守護者', count: 2 }], effects: [{ type: 'BUFF_ALL_ALLIES', grantDoubleAction: true }] }
+            { id: 'sally_skill_1', name: '着付け', description: '自身のモンスター1体の体力と攻撃力を+1する。', cost: 0, level: 1, conditions: [{ type: 'role', value: '守護者', count: 1 }], effects: [{ type: 'BUFF_TARGET_STATS', buffHp: 1, buffAttack: 1 }] },
+            { id: 'sally_skill_2', name: '花吹雪', description: '敵モンスター全体に2ダメージを与える。', cost: 1, level: 1, conditions: [{ type: 'role', value: '守護者', count: 1 }], effects: [{ type: 'DAMAGE_ALL_ENEMY', amount: 2 }] },
+            { id: 'sally_skill_3', name: '誘惑', description: '相手のターン終了まで、敵クリーチャー1体を麻痺状態にする。', cost: 0, level: 1, conditions: [{ type: 'affiliation', value: '月', count: 1 }], effects: [{ type: 'PARALYZE_TARGET' }] },
+            { id: 'sally_skill_4', name: '叱咤激励', description: '味方のクリーチャー全体をレベルアップさせる。', cost: 3, level: 2, conditions: [{ type: 'role', value: '守護者', count: 2 }], effects: [{ type: 'LEVEL_UP_ALL_ALLIES' }] },
+            { id: 'sally_skill_5', name: '酔拳', description: 'セット中の敵クリーチャー1体をランダムに召喚し、攻撃力を-1する。', cost: 1, level: 2, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '守護者', count: 2 }], effects: [{ type: 'SUMMON_RANDOM_ENEMY_RESERVED' }, { type: 'DEBUFF_TARGET_STATS', buffAttack: -1 }] },
+            { id: 'sally_skill_6', name: '繁忙', description: '相手のターン終了時まで、相手の手札の全カードのコストを+1し、自身の手札のクリーチャーのコストを-1する。', cost: 0, level: 2, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '守護者', count: 1 }], effects: [{ type: 'DEBUFF_ENEMY_HAND_COST', amount: 1 }, { type: 'BUFF_HAND_COST', amount: -1 }] },
+            { id: 'sally_skill_7', name: '狂乱', description: '敵クリーチャー全体に、固定2ダメージを与える。相手のデッキからランダムにカードを1枚墓地に送る。', cost: 1, level: 3, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '守護者', count: 3 }], effects: [{ type: 'FIXED_DAMAGE_ALL_ENEMY', amount: 2 }, { type: 'MILL_ENEMY_DECK', amount: 1 }] },
+            { id: 'sally_skill_8', name: '大宴', description: '敵全体に固定2ダメージを与える。CPを3得る。自身のクリーチャー全体の体力と攻撃力を+1する。', cost: 0, level: 3, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '守護者', count: 2 }], effects: [{ type: 'FIXED_DAMAGE_ALL_ENEMY', amount: 2 }, { type: 'GAIN_MP', amount: 3 }, { type: 'BUFF_ALL_ALLIES', buffHp: 1, buffAttack: 1 }] },
+            { id: 'sally_skill_9', name: '稽古', description: '自身のクリーチャー全体に2回行動を付与する。', cost: 5, level: 3, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '守護者', count: 2 }], effects: [{ type: 'BUFF_ALL_ALLIES', grantDoubleAction: true }] }
         ]
     },
     shikigami: {
         id: 'shikigami',
-        name: 'シキガミ（四季神 葵）',
+        name: 'シキダミ',
         maxHp: 29,
         defense: 0,
         initialMp: 4,
         mpRegen: 4,
         equippedSkills: [
-            { id: 'shikigami_skill_1', name: '死霊復活', description: '死亡した味方の死霊術師タイプ1体を空いている場にランダムに蘇生する。', cost: 5, level: 1, conditions: [{ type: 'role', value: '死霊術師', count: 1 }], effects: [{ type: 'RESURRECT_RANDOM_ROLE', roleCondition: '死霊術師' }] },
-            { id: 'shikigami_skill_2', name: '黒の波動', description: '敵1体に、2ダメージを与える。', cost: 0, level: 1, conditions: [{ type: 'role', value: '死霊術師', count: 1 }], effects: [{ type: 'DAMAGE_TARGET', amount: 2 }] },
-            { id: 'shikigami_skill_3', name: 'ネガティブネットワーク', description: 'セット中の敵クリーチャー全体に、攻撃力-1を付与する。', cost: 0, level: 1, conditions: [{ type: 'affiliation', value: '月', count: 1 }], effects: [{ type: 'DEBUFF_ALL_ENEMY_RESERVED_STATS', buffAttack: -1 }] },
-            { id: 'shikigami_skill_4', name: 'ブラックマジック', description: '相手のターン終了時まで、相手の手札のクリーチャーのコストが+2される。', cost: 0, level: 2, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '死霊術師', count: 1 }], effects: [{ type: 'DEBUFF_ENEMY_HAND_COST', amount: 2 }] },
-            { id: 'shikigami_skill_5', name: '闇の波動', description: '敵全体に、3ダメージを与える。', cost: 1, level: 2, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '死霊術師', count: 1 }], effects: [{ type: 'DAMAGE_ALL_ENEMIES_AND_PLAYER', amount: 3 }] },
-            { id: 'shikigami_skill_6', name: 'アンデッドコール', description: '死霊術師タイプのカードを1枚ドローする。あなたはMPを1得る。', cost: 0, level: 2, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '死霊術師', count: 1 }], effects: [{ type: 'DRAW_CARD_WITH_ROLE', roleCondition: '死霊術師' }, { type: 'GAIN_MP', amount: 1 }] },
-            { id: 'shikigami_skill_7', name: 'ディストラクション', description: '相手のデッキ内のカードを上から2枚消滅させる。あなたのライフを2回復する。', cost: 0, level: 3, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '死霊術師', count: 2 }], effects: [{ type: 'MILL_ENEMY_DECK', amount: 2 }, { type: 'HEAL_PLAYER', amount: 2 }] },
-            { id: 'shikigami_skill_8', name: '怨嗟の波動', description: '敵全体に、2ダメージを与え、味方の死霊術師タイプ全体に、このターンの間、攻撃力+2を付与する。', cost: 0, level: 3, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '死霊術師', count: 2 }], effects: [{ type: 'DAMAGE_ALL_ENEMIES_AND_PLAYER', amount: 2 }, { type: 'BUFF_ALL_ROLE', roleCondition: '死霊術師', buffAttack: 2 }] },
-            { id: 'shikigami_skill_9', name: 'テラーウイルス', description: '相手の手札をランダムに1枚消滅させる。', cost: 2, level: 3, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '死霊術師', count: 2 }], effects: [{ type: 'DISCARD_RANDOM_ENEMY_HAND', amount: 1 }] }
+            { id: 'shikigami_skill_1', name: '死者蘇生', description: '墓地の死霊術師タイプ1体を空いている場にランダムに復活させる。', cost: 5, level: 1, conditions: [{ type: 'role', value: '死霊術師', count: 1 }], effects: [{ type: 'RESURRECT_RANDOM_ROLE', roleCondition: '死霊術師' }] },
+            { id: 'shikigami_skill_2', name: 'シャドーボール', description: '敵1体に2ダメージを与える。', cost: 0, level: 1, conditions: [{ type: 'role', value: '死霊術師', count: 1 }], effects: [{ type: 'DAMAGE_TARGET', amount: 2 }] },
+            { id: 'shikigami_skill_3', name: '盛り下げる', description: 'セット中の敵クリーチャー全体の攻撃力を-1する。', cost: 0, level: 1, conditions: [{ type: 'affiliation', value: '月', count: 1 }], effects: [{ type: 'DEBUFF_ALL_ENEMY_RESERVED_STATS', buffAttack: -1 }] },
+            { id: 'shikigami_skill_4', name: 'プラスウルトラ', description: '相手のターン終了時まで、相手の手札のクリーチャーのコストが+2される。', cost: 0, level: 2, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '死霊術師', count: 1 }], effects: [{ type: 'DEBUFF_ENEMY_HAND_COST', amount: 2 }] },
+            { id: 'shikigami_skill_5', name: '黒霧', description: '敵全体に3ダメージを与える。', cost: 1, level: 2, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '死霊術師', count: 1 }], effects: [{ type: 'DAMAGE_ALL_ENEMIES_AND_PLAYER', amount: 3 }] },
+            { id: 'shikigami_skill_6', name: 'ディスティニードロー', description: '死霊術師タイプのモンスターを1枚ドローする。CPを1得る。', cost: 0, level: 2, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '死霊術師', count: 1 }], effects: [{ type: 'DRAW_CARD_WITH_ROLE', roleCondition: '死霊術師' }, { type: 'GAIN_MP', amount: 1 }] },
+            { id: 'shikigami_skill_7', name: '拉致問題', description: '相手のデッキからランダムにカードを2枚墓地に送る。自身の体力を2回復する。', cost: 0, level: 3, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '死霊術師', count: 2 }], effects: [{ type: 'MILL_ENEMY_DECK', amount: 2 }, { type: 'HEAL_PLAYER', amount: 2 }] },
+            { id: 'shikigami_skill_8', name: '無茶苦茶', description: '敵全体に2ダメージを与える。ターン終了まで、自身の死霊術師タイプ全体の攻撃力を+2する。', cost: 0, level: 3, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '死霊術師', count: 2 }], effects: [{ type: 'DAMAGE_ALL_ENEMIES_AND_PLAYER', amount: 2 }, { type: 'BUFF_ALL_ROLE', roleCondition: '死霊術師', buffAttack: 2 }] },
+            { id: 'shikigami_skill_9', name: 'ババ抜き', description: '相手の手札をランダムに1枚墓地に送る。', cost: 2, level: 3, conditions: [{ type: 'affiliation', value: '月', count: 1 }, { type: 'role', value: '死霊術師', count: 2 }], effects: [{ type: 'DISCARD_RANDOM_ENEMY_HAND', amount: 1 }] }
         ],
     },
     honoka: {
         id: 'honoka',
-        name: 'ホノカ（神道 ほのか）',
+        name: 'ホソカ',
         maxHp: 19,
         defense: 2,
         initialMp: 4,
         mpRegen: 4,
         equippedSkills: [
-            { id: 'honoka_skill_1', name: '火炎符', description: '敵1体に、2ダメージを与える。', cost: 0, level: 1, conditions: [{ type: 'affiliation', value: '星', count: 1 }], effects: [{ type: 'DAMAGE_TARGET', amount: 2 }] },
-            { id: 'honoka_skill_2', name: '護身符', description: '味方の守護者タイプ1体に、シールドを付与する。', cost: 0, level: 1, conditions: [{ type: 'affiliation', value: '星', count: 1 }], effects: [{ type: 'BUFF_TARGET_STATS', targetType: '守護者', grantShield: true }] },
-            { id: 'honoka_skill_3', name: '活命の法', description: '味方全体のライフを1回復する。', cost: 0, level: 1, conditions: [{ type: 'affiliation', value: '星', count: 1 }], effects: [{ type: 'HEAL_ALL_ALLY_MONSTERS', amount: 1 }] },
-            { id: 'honoka_skill_4', name: '祈祷', description: 'カードを1枚ドローする。あなたの手札のクリーチャーのコストが-2される。', cost: 0, level: 2, conditions: [{ type: 'affiliation', value: '星', count: 2 }], effects: [{ type: 'DRAW_CARDS', amount: 1 }, { type: 'BUFF_HAND_COST', amount: -2 }] },
-            { id: 'honoka_skill_5', name: '召喚阻止', description: 'セット中の敵クリーチャー1体を相手の手札に戻す。相手はそのクリーチャーの召喚コスト分のMPを得る。', cost: 2, level: 2, conditions: [{ type: 'affiliation', value: '星', count: 3 }], effects: [{ type: 'RETURN_ENEMY_TO_HAND_GIVE_MP' }] },
-            { id: 'honoka_skill_6', name: '召雷符', description: '敵1体に、固定3ダメージを与える。', cost: 0, level: 2, conditions: [{ type: 'affiliation', value: '星', count: 2 }], effects: [{ type: 'FIXED_DAMAGE_TARGET', amount: 3 }] },
-            { id: 'honoka_skill_7', name: '暴嵐符', description: 'セット中の敵クリーチャー全員をサモンし、敵全体に、固定2ダメージを与える。', cost: 2, level: 3, conditions: [{ type: 'affiliation', value: '星', count: 4 }], effects: [{ type: 'SUMMON_ALL_ENEMY_RESERVED' }, { type: 'FIXED_DAMAGE_ALL_ENEMY', amount: 2 }] },
-            { id: 'honoka_skill_8', name: '金剛符', description: '味方クリーチャー全体に、シールドを付与する。味方の雲タイプ全体に、攻撃力＋1を付与する。', cost: 0, level: 3, conditions: [{ type: 'affiliation', value: '星', count: 3 }], effects: [{ type: 'BUFF_ALL_ALLIES', grantShield: true }, { type: 'BUFF_ALL_AFFILIATION', affiliationCondition: '雲', buffAttack: 1 }] },
-            { id: 'honoka_skill_9', name: '退魔の波動', description: '敵1体に、固定5ダメージを与える。', cost: 0, level: 3, conditions: [{ type: 'affiliation', value: '星', count: 3 }], effects: [{ type: 'FIXED_DAMAGE_TARGET', amount: 5 }] }
+            { id: 'honoka_skill_1', name: 'キラキラリン', description: '敵1体に2ダメージを与える。', cost: 0, level: 1, conditions: [{ type: 'affiliation', value: '星', count: 1 }], effects: [{ type: 'DAMAGE_TARGET', amount: 2 }] },
+            { id: 'honoka_skill_2', name: '社会的法律のベール', description: '自身の守護者タイプ1体にシールドを付与する。', cost: 0, level: 1, conditions: [{ type: 'affiliation', value: '星', count: 1 }], effects: [{ type: 'BUFF_TARGET_STATS', targetType: '守護者', grantShield: true }] },
+            { id: 'honoka_skill_3', name: '目の保養', description: '自身全体の体力を1回復する。', cost: 0, level: 1, conditions: [{ type: 'affiliation', value: '星', count: 1 }], effects: [{ type: 'HEAL_ALL_ALLY_MONSTERS', amount: 1 }] },
+            { id: 'honoka_skill_4', name: 'パパ活', description: 'カードを1枚ドローする。手札のクリーチャーのコストが-2される。', cost: 0, level: 2, conditions: [{ type: 'affiliation', value: '星', count: 2 }], effects: [{ type: 'DRAW_CARDS', amount: 1 }, { type: 'BUFF_HAND_COST', amount: -2 }] },
+            { id: 'honoka_skill_5', name: '門限', description: 'セット中の敵クリーチャー1体を相手の手札に戻す。相手はそのクリーチャーのコスト分のCPを得る。', cost: 2, level: 2, conditions: [{ type: 'affiliation', value: '星', count: 3 }], effects: [{ type: 'RETURN_ENEMY_TO_HAND_GIVE_MP' }] },
+            { id: 'honoka_skill_6', name: 'シールコレクション', description: '敵1体に固定3ダメージを与える。', cost: 0, level: 2, conditions: [{ type: 'affiliation', value: '星', count: 2 }], effects: [{ type: 'FIXED_DAMAGE_TARGET', amount: 3 }] },
+            { id: 'honoka_skill_7', name: '魅惑の一撃', description: 'セット中の敵クリーチャー全員をサモンし、敵全体に固定2ダメージを与える。', cost: 2, level: 3, conditions: [{ type: 'affiliation', value: '星', count: 4 }], effects: [{ type: 'SUMMON_ALL_ENEMY_RESERVED' }, { type: 'FIXED_DAMAGE_ALL_ENEMY', amount: 2 }] },
+            { id: 'honoka_skill_8', name: '頑張れ♪', description: '味方クリーチャー全体にシールドを付与する。味方の雲タイプ全体の攻撃力を+1をする。', cost: 0, level: 3, conditions: [{ type: 'affiliation', value: '星', count: 3 }], effects: [{ type: 'BUFF_ALL_ALLIES', grantShield: true }, { type: 'BUFF_ALL_AFFILIATION', affiliationCondition: '雲', buffAttack: 1 }] },
+            { id: 'honoka_skill_9', name: '盛り髪', description: '敵1体に固定5ダメージを与える。', cost: 0, level: 3, conditions: [{ type: 'affiliation', value: '星', count: 3 }], effects: [{ type: 'FIXED_DAMAGE_TARGET', amount: 5 }] }
         ]
     },
     leeria: {
         id: 'leeria',
-        name: 'リーリア',
+        name: 'リーシア',
         maxHp: 24,
         defense: 1,
         initialMp: 4,
         mpRegen: 4,
         equippedSkills: [
-            { id: 'leeria_skill_1', name: '風の刃', description: '敵1体に、固定2ダメージを与える。', cost: 1, level: 1, conditions: [{ type: 'role', value: '守護者', count: 1 }], effects: [{ type: 'FIXED_DAMAGE_TARGET', amount: 2 }] },
-            { id: 'leeria_skill_2', name: '平手打ち', description: '敵1体に、2ダメージを与える。', cost: 0, level: 1, conditions: [{ type: 'role', value: '守護者', count: 1 }], effects: [{ type: 'DAMAGE_TARGET', amount: 2 }] },
-            { id: 'leeria_skill_3', name: '風の加護', description: 'あなたはMPを1得る。', cost: 0, level: 1, conditions: [{ type: 'role', value: '魔術師', count: 1 }], effects: [{ type: 'GAIN_MP', amount: 1 }] },
-            { id: 'leeria_skill_4', name: '豊穣の守り', description: '味方クリーチャー1体に、ライフ+1とシールドを付与する。', cost: 0, level: 2, conditions: [{ type: 'role', value: '守護者', count: 1 }, { type: 'role', value: '魔術師', count: 1 }], effects: [{ type: 'BUFF_TARGET_STATS', buffHp: 1, grantShield: true }] },
-            { id: 'leeria_skill_5', name: '清廉の調べ', description: '味方クリーチャー全体に、ライフ+2を付与する。', cost: 1, level: 2, conditions: [{ type: 'role', value: '守護者', count: 2 }, { type: 'role', value: '魔術師', count: 1 }], effects: [{ type: 'BUFF_ALL_ALLIES', buffHp: 2 }] },
-            { id: 'leeria_skill_6', name: '乙女の祈り', description: 'カードを2枚ドローする。味方全体のライフを1回復する。', cost: 0, level: 2, conditions: [{ type: 'role', value: '守護者', count: 2 }], effects: [{ type: 'DRAW_CARDS', amount: 2 }, { type: 'HEAL_ALL_ALLY_MONSTERS', amount: 1 }] },
-            { id: 'leeria_skill_7', name: '大地の波動', description: '敵全体に、固定1ダメージを与え、味方クリーチャー全体に、攻撃力+2を付与する。', cost: 2, level: 3, conditions: [{ type: 'role', value: '守護者', count: 3 }, { type: 'role', value: '魔術師', count: 1 }], effects: [{ type: 'FIXED_DAMAGE_ALL_ENEMY', amount: 1 }, { type: 'BUFF_ALL_ALLIES', buffAttack: 2 }] },
-            { id: 'leeria_skill_8', name: '怒りの暴風', description: '敵全体に、固定4ダメージを与える。あなたはMPを2得る。', cost: 0, level: 3, conditions: [{ type: 'role', value: '守護者', count: 3 }], effects: [{ type: 'FIXED_DAMAGE_ALL_ENEMY', amount: 4 }, { type: 'GAIN_MP', amount: 2 }] },
-            { id: 'leeria_skill_9', name: '生命の息吹', description: '味方クリーチャー全体に、ライフ+1と攻撃力+1を付与する。', cost: 0, level: 3, conditions: [{ type: 'role', value: '守護者', count: 3 }, { type: 'role', value: '魔術師', count: 1 }], effects: [{ type: 'BUFF_ALL_ALLIES', buffHp: 1, buffAttack: 1 }] }
+            { id: 'leeria_skill_1', name: '桑で殴る', description: '敵1体に固定2ダメージを与える。', cost: 1, level: 1, conditions: [{ type: 'role', value: '守護者', count: 1 }], effects: [{ type: 'FIXED_DAMAGE_TARGET', amount: 2 }] },
+            { id: 'leeria_skill_2', name: 'スコップで殴る', description: '敵1体に2ダメージを与える。', cost: 0, level: 1, conditions: [{ type: 'role', value: '守護者', count: 1 }], effects: [{ type: 'DAMAGE_TARGET', amount: 2 }] },
+            { id: 'leeria_skill_3', name: '耕す', description: 'CPを1得る。', cost: 0, level: 1, conditions: [{ type: 'role', value: '魔術師', count: 1 }], effects: [{ type: 'GAIN_MP', amount: 1 }] },
+            { id: 'leeria_skill_4', name: '採れたてフレッシュ', description: '味方クリーチャー1体の体力を+1し、シールドを付与する。', cost: 0, level: 2, conditions: [{ type: 'role', value: '守護者', count: 1 }, { type: 'role', value: '魔術師', count: 1 }], effects: [{ type: 'BUFF_TARGET_STATS', buffHp: 1, grantShield: true }] },
+            { id: 'leeria_skill_5', name: '豊作の恩恵', description: '味方クリーチャー全体の体力を+2する。', cost: 1, level: 2, conditions: [{ type: 'role', value: '守護者', count: 2 }, { type: 'role', value: '魔術師', count: 1 }], effects: [{ type: 'BUFF_ALL_ALLIES', buffHp: 2 }] },
+            { id: 'leeria_skill_6', name: '豊作祈願', description: 'カードを2枚ドローする。味方全体の体力を1回復する。', cost: 0, level: 2, conditions: [{ type: 'role', value: '守護者', count: 2 }], effects: [{ type: 'DRAW_CARDS', amount: 2 }, { type: 'HEAL_ALL_ALLY_MONSTERS', amount: 1 }] },
+            { id: 'leeria_skill_7', name: '農家ズ', description: '敵全体に固定1ダメージを与える。味方クリーチャー全体の攻撃力を+2する。', cost: 2, level: 3, conditions: [{ type: 'role', value: '守護者', count: 3 }, { type: 'role', value: '魔術師', count: 1 }], effects: [{ type: 'FIXED_DAMAGE_ALL_ENEMY', amount: 1 }, { type: 'BUFF_ALL_ALLIES', buffAttack: 2 }] },
+            { id: 'leeria_skill_8', name: '大量収穫', description: '敵全体に固定4ダメージを与える。CPを2得る。', cost: 0, level: 3, conditions: [{ type: 'role', value: '守護者', count: 3 }], effects: [{ type: 'FIXED_DAMAGE_ALL_ENEMY', amount: 4 }, { type: 'GAIN_MP', amount: 2 }] },
+            { id: 'leeria_skill_9', name: '', description: '味方クリーチャー全体に、ライフ+1と攻撃力+1を付与する。', cost: 0, level: 3, conditions: [{ type: 'role', value: '守護者', count: 3 }, { type: 'role', value: '魔術師', count: 1 }], effects: [{ type: 'BUFF_ALL_ALLIES', buffHp: 1, buffAttack: 1 }] }
         ]
     },
     gameira: {
